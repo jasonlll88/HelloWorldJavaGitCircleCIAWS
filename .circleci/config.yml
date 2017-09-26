@@ -6,16 +6,16 @@ jobs:
       - image: circleci/openjdk:8-jdk-browsers
     steps: 
       - checkout
-      - run: echo "hello world"
-     #  - restore_cache:
-     #      key: circleci-demo-java-{{ checksum "pom.xml" }} 
-     #  - run: mvn dependency:go-offline 
-     #  - save_cache:
-     #      paths:
-     #        - ~/.m2
-     #      key: circleci-demo-java-{{ checksum "pom.xml" }}
-     # - run: mvn package
-     # - store_test_results:
-     #      path: target/surefire-reports
-     # - store_artifacts:
-     #      path: target/demo-java-0.0.1-SNAPSHOT.jar
+      # - run: echo "hello world"
+      - restore_cache:
+          key: circleci-demo-java-{{ checksum "pom.xml" }} 
+      - run: mvn dependency:go-offline 
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: circleci-demo-java-{{ checksum "pom.xml" }}
+      - run: mvn package
+      - store_test_results:
+          path: target/surefire-reports
+      - store_artifacts:
+          path: target/demo-java-0.0.1-SNAPSHOT.jar
