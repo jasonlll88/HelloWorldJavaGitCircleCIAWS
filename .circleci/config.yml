@@ -1,10 +1,10 @@
 version: 2
 jobs:
- build:
+  build:
   working_directory: ~/circleci-demo-java
   docker:
       - image: circleci/openjdk:8-jdk-browsers
- steps: 
+  steps: 
       - checkout
       - restore_cache:
           key: circleci-demo-java-{{ checksum "pom.xml" }} 
