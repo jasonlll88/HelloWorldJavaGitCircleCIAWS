@@ -9,6 +9,7 @@ jobs:
       # - run: echo "hello world"
       - run: pwd
       - run: ls
+      - run: cat README.md
       - restore_cache:
           key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }} 
       - run: mvn dependency:go-offline 
