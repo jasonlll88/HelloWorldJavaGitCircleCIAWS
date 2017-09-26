@@ -1,12 +1,12 @@
 version: 2
-# jobs:
-#   build:
-#   working_directory: ~/circleci-demo-java
-#     docker:
-#       - image: circleci/openjdk:8-jdk-browsers
-#   steps: 
-#       - checkout
-#       - run: echo "hello world"
+jobs:
+  build:
+  working_directory: ~/circleci-demo-java
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers
+  steps: 
+      - checkout
+      - run: echo "hello world"
      #  - restore_cache:
      #      key: circleci-demo-java-{{ checksum "pom.xml" }} 
      #  - run: mvn dependency:go-offline 
