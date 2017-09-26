@@ -8,12 +8,12 @@ jobs:
       - checkout
       # - run: echo "hello world"
       - restore_cache:
-          key: circleci-demo-java-{{ checksum "pom.xml" }} 
+          key: circleci-demo-java-{{ checksum "../pom.xml" }} 
       - run: mvn dependency:go-offline 
       - save_cache:
           paths:
             - ~/.m2
-          key: circleci-demo-java-{{ checksum "pom.xml" }}
+          key: circleci-demo-java-{{ checksum "../pom.xml" }}
       - run: mvn package
       - store_test_results:
           path: target/surefire-reports
