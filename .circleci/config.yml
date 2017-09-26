@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/circleci-demo-java
     docker:
       - image: circleci/openjdk:8-jdk-browsers
-  steps: 
+    steps: 
       - checkout
       - run: echo "hello world"
      #  - restore_cache:
