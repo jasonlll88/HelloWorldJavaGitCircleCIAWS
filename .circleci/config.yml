@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/HelloWorldJavaGitCircleCIAWS
     docker:
       - image: circleci/openjdk:8-jdk-browsers
-    steps: 
+    steps:
       - checkout
       # - run: echo "hello world"
       - run: pwd
@@ -12,8 +12,8 @@ jobs:
       - run: cat README.md
       - run: ls ../
       - restore_cache:
-          key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }} 
-      - run: mvn dependency:go-offline 
+          key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
+      - run: mvn dependency:go-offline
       - save_cache:
           paths:
             - ~/.m2
@@ -21,8 +21,8 @@ jobs:
       - run: mvn clean install
       - run: mvn test
       - run: mvn package
-      - run: mvn exec:java -Dexec.mainClass="main.java.HelloWorldGitCircleCIAWS"
-      - run: mvn exec:java
+#      - run: mvn exec:java -Dexec.mainClass="main.java.HelloWorldGitCircleCIAWS"
+#      - run: mvn exec:java
       - store_test_results:
           path: target/surefire-reports
       - store_artifacts:
