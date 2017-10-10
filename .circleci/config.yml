@@ -33,7 +33,7 @@ jobs:
           # we can use the pom.xml  ????
           key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
 
-     - deploy:
+      - deploy:
          # name of the deploy
          name: Deploy HelloWorldJavaGitCircleCIAWS
 
