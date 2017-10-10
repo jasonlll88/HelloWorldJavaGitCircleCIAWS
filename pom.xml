@@ -59,8 +59,11 @@
 
    </dependencies>
    <scm>
-     <connection>scm:git://git@github.com:/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</connection>
-     <developerConnection>scm:git://git@github.com:/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection>
+     <connection>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</connection>
+     <url>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</url>
+     <!--
+     <developerConnection>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection>
      <tag>v0.0.1</tag>
+   -->
    </scm>
   </project>
