@@ -38,8 +38,7 @@ jobs:
          name: Deploy HelloWorldJavaGitCircleCIAWS
 
          command: |
-        # if the branch is master then
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
               if [[ `git log -1` =~ "[maven-release-plugin]" ]]; then
                    echo "Ignoring release plugin generated version"
                else
