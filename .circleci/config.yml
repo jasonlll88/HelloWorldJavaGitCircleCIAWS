@@ -32,40 +32,40 @@ jobs:
           # https://circleci.com/docs/2.0/caching/#using-keys-and-templates
           # we can use the pom.xml  ????
           key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
-      #
-      # - deploy:
-      #    # name of the deploy
-      #    name: Deploy HelloWorldJavaGitCircleCIAWS
-      #
-      #    command: |
-      #   # if the branch is master then
-      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
-      #         if [[ `git log -1` =~ "[maven-release-plugin]" ]]; then
-      #              echo "Ignoring release plugin generated version"
-      #          else
-      #           echo "Preparing release..."
-      #           mvn -B release:prepare -Dmaven.test.skip=true
-      #           # Change the permissions to the script deploy.sh
-      #           # Execute the script deploy.sh with the following paramenters:
-      #           # 1. blacklist-adapter
-      #           # 2. adapters
-      #           # 3. staging
-      #           # 4. get the version of the project filtering through a regular expression filter (|grep -Ev)
-      #           chmod 755 deploy.sh && ./deploy.sh HelloWorldJavaGitCircleCIAWS adapters prod "$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version|grep -Ev '(^\[|Download\w+:)')"
-      #         fi
-      #       else
-      #         echo "Not deploy in master"
-      #       fi
-      #
-      # - run:
-      #     name: SONAR
-      #     # if the branch is master then run
-      #     command: |
-      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
-      #     # run maven sonar (open source quality management platform)
-      #     # using alternative path for users options (-s) user options in file settings_sonar.xml
-      #                     mvn sonar:sonar -s settings_sonar.xml
-      #       fi
+
+      - deploy:
+         # name of the deploy
+         name: Deploy HelloWorldJavaGitCircleCIAWS
+
+         command: |
+        # if the branch is master then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              if [[ `git log -1` =~ "[maven-release-plugin]" ]]; then
+                   echo "Ignoring release plugin generated version"
+               else
+                echo "Preparing release..."
+                mvn -B release:prepare -Dmaven.test.skip=true
+                # Change the permissions to the script deploy.sh
+                # Execute the script deploy.sh with the following paramenters:
+                # 1. blacklist-adapter
+                # 2. adapters
+                # 3. staging
+                # 4. get the version of the project filtering through a regular expression filter (|grep -Ev)
+                chmod 755 deploy.sh && ./deploy.sh HelloWorldJavaGitCircleCIAWS adapters prod "$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version|grep -Ev '(^\[|Download\w+:)')"
+              fi
+            else
+              echo "Not deploy in master"
+            fi
+
+      - run:
+          name: SONAR
+          # if the branch is master then run
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+          # run maven sonar (open source quality management platform)
+          # using alternative path for users options (-s) user options in file settings_sonar.xml
+                          mvn sonar:sonar -s settings_sonar.xml
+            fi
 
 
 #     docker:
