@@ -55,7 +55,7 @@
    </dependencies>
    <scm>
      <connection>scm:git:ssh://git@github.com:jasonlll88/HelloWorldJavaGitCircleCIAWS.git</connection>
-     <developerConnection>scm:git:ssh://git@github.com:jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection>
+     <!-- <developerConnection>scm:git:ssh://git@github.com:jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection> -->
      <tag>v0.0.1</tag>
    </scm>
   </project>
