@@ -22,9 +22,9 @@ jobs:
     steps:
       #In this case, the checkout step will checkout project source code into the job’s working_directory.
       - checkout
-      # - restore_cache:
-      #   key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
-      # - run: mvn clean install
+      - restore_cache:
+        key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
+      - run: mvn clean install
       # - save_cache:
       #     # https://circleci.com/docs/2.0/caching/#caching-libraries MAVEN
       #     paths:
@@ -66,7 +66,7 @@ jobs:
       #     # using alternative path for users options (-s) user options in file settings_sonar.xml
       #                     mvn sonar:sonar -s settings_sonar.xml
       #       fi
-      #
+
 
 #     docker:
 #       - image: circleci/openjdk:8-jdk-browsers
