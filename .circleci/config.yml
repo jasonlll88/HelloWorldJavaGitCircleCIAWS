@@ -23,7 +23,7 @@ jobs:
       #In this case, the checkout step will checkout project source code into the job’s working_directory.
       - checkout
       - restore_cache:
-        key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
+          key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
       - run: mvn clean install
       # - save_cache:
       #     # https://circleci.com/docs/2.0/caching/#caching-libraries MAVEN
