@@ -25,13 +25,13 @@ jobs:
       - restore_cache:
           key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
       - run: mvn clean install
-      # - save_cache:
-      #     # https://circleci.com/docs/2.0/caching/#caching-libraries MAVEN
-      #     paths:
-      #       - ~/.m2
-      #     # https://circleci.com/docs/2.0/caching/#using-keys-and-templates
-      #     # we can use the pom.xml  ????
-      #     key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
+      - save_cache:
+          # https://circleci.com/docs/2.0/caching/#caching-libraries MAVEN
+          paths:
+            - ~/.m2
+          # https://circleci.com/docs/2.0/caching/#using-keys-and-templates
+          # we can use the pom.xml  ????
+          key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
       #
       # - deploy:
       #    # name of the deploy
