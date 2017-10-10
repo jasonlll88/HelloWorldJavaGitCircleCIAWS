@@ -4,7 +4,7 @@
   <groupId>HelloWorldGitCircleCIAWS</groupId>
   <artifactId>HelloWorldGitCircleCIAWS</artifactId>
 
-  <version>0.0.5-SNAPSHOT</version>
+  <version>0.0.5</version>
   <packaging>jar</packaging>
 
   <build>
@@ -61,7 +61,7 @@
    <scm>
      <connection>scm:git:github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</connection>
 
-     <tag>0.0.5.1</tag>
+     <tag>v0.0.5</tag>
      <!--
      <url>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS</url>
      <developerConnection>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection>
