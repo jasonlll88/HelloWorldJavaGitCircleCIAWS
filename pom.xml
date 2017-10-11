@@ -10,6 +10,7 @@
   <packaging>jar</packaging>
 
   <build>
+    <finalName>app</finalName>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
@@ -67,7 +68,7 @@
      <developerConnection>scm:git:https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection>
 
 
-     <tag>v0.0.8</tag>
+     <tag>HEAD</tag>
 
      <!--
      <url>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS</url>
