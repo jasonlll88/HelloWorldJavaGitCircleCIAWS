@@ -48,8 +48,6 @@
         				</configuration>
         			</plugin>
           </plugins>
-
-          
    </build>
    <dependencies>
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
