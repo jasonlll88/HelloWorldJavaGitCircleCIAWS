@@ -4,11 +4,9 @@
   <groupId>HelloWorldGitCircleCIAWS</groupId>
   <artifactId>HelloWorldGitCircleCIAWS</artifactId>
 
-<<<<<<< HEAD
+
   <version>0.0.8-SNAPSHOT</version>
-=======
-  <version>0.0.1</version>
->>>>>>> da3e6d6fdc5603060b356e2e4be480c32554d39d
+
   <packaging>jar</packaging>
 
   <build>
