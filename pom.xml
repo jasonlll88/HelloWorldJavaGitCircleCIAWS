@@ -5,7 +5,7 @@
   <artifactId>HelloWorldGitCircleCIAWS</artifactId>
 
 
-  <version>0.0.8-SNAPSHOT</version>
+  <version>0.0.8</version>
 
   <packaging>jar</packaging>
 
