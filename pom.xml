@@ -67,11 +67,8 @@
      <developerConnection>scm:git:https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection>
 
 
-<<<<<<< HEAD
      <tag>v0.0.8</tag>
-=======
-     <tag>v0.0.1</tag>
->>>>>>> da3e6d6fdc5603060b356e2e4be480c32554d39d
+
      <!--
      <url>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS</url>
      <developerConnection>https://github.com/jasonlll88/HelloWorldJavaGitCircleCIAWS.git</developerConnection>
