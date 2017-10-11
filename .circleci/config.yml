@@ -64,6 +64,12 @@ jobs:
                 TASK_FAMILY="$ENVIRONMENT-accountopen-$APP_NAME-task-family"
                 AWS_ACCOUNT_ID=058018423448
 
+                if  [ ${ENVIRONMENT} = "prod" ]; then
+                    export AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID_PROD
+                    export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID_PROD
+                    export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_PROD
+                fi
+
 
 
               fi
