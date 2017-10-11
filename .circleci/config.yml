@@ -66,6 +66,7 @@ jobs:
                     # configure the output format
                     aws configure set default.output json
                 }
+                
 
                 # define function
                 push_ecr_image(){
