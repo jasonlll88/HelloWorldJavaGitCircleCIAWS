@@ -46,7 +46,7 @@ jobs:
                else
                 echo "Preparing release..."
                 mvn -B release:prepare -Dmaven.test.skip=true
-                chmod 755 deploy.sh && ./deploy.sh HelloWorldJavaGitCircleCIAWS adapters prod "$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version|grep -Ev '(^\[|Download\w+:)')"
+         # chmod 755 deploy.sh && ./deploy.sh HelloWorldJavaGitCircleCIAWS adapters prod "$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version|grep -Ev '(^\[|Download\w+:)')"
               fi
             else
               echo "Not deploy in master"
