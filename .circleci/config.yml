@@ -54,6 +54,15 @@ jobs:
             fi
 
 
+##### example of script
+
+            JQ="jq -r -e"
+            
+
+
+
+######
+
       # - run:
       #     name: SONAR
       #     # if the branch is master then run
