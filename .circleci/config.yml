@@ -80,15 +80,15 @@ jobs:
                 # http://docs.aws.amazon.com/cli/latest/reference/ecr/get-login.html
                 eval $(aws ecr get-login --region us-east-1)
 
-                # Create a docker image from the source of this folder
-                docker build -t $ENVIRONMENT-$APP_NAME .
-
-                # modify the tag of the image builded
-                docker tag $ENVIRONMENT-$APP_NAME $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
-
-                # Push the docker image to the AWS instance
-                docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
-
+                # # Create a docker image from the source of this folder
+                # docker build -t $ENVIRONMENT-$APP_NAME .
+                #
+                # # modify the tag of the image builded
+                # docker tag $ENVIRONMENT-$APP_NAME $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
+                #
+                # # Push the docker image to the AWS instance
+                # docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
+                #
 
 
               fi
