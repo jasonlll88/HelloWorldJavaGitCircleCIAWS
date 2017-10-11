@@ -48,6 +48,8 @@ jobs:
                 echo "Preparing release..."
                 mvn -B release:prepare -Dmaven.test.skip=true
 
+                JQ="jq -r -e"
+
                 SERVICE_NAME="prod-accountopen-HelloWorldJavaGitCircleCIAWS-service"
                 CLUSTER_NAME="bdb-accountopen-prod-adapters-cluster"
                 BUILD_NUMBER=${CIRCLE_BUILD_NUM}
