@@ -70,6 +70,13 @@ jobs:
                     export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY_PROD
                 fi
 
+                # verify version of AWS
+                aws --version
+                # configure the dafult regiion
+                aws configure set default.region us-east-1
+                # configure the output format
+                aws configure set default.output json
+
 
 
               fi
