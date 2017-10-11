@@ -87,7 +87,7 @@ jobs:
                 docker tag $ENVIRONMENT-$APP_NAME $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
 
                 # # Push the docker image to the AWS instance
-                docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
+                docker push $AWS_ACCOUNT_ID.dkr.ecr.us-west-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
 
 
 
