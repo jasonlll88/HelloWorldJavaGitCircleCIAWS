@@ -51,7 +51,7 @@ jobs:
                 JQ="jq -r -e"
 
                 # assign the paramenters to some variables
-                APP_NAME=HelloWorldJavaGitCircleCIAWS
+                APP_NAME=helloworld
                 CLUSTER_NAME=adapters
                 ENVIRONMENT=prod
                 VERSION="$(mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version|grep -Ev '(^\[|Download\w+:)')"
@@ -84,8 +84,8 @@ jobs:
                 docker build -t $ENVIRONMENT-$APP_NAME .
 
                 # # modify the tag of the image builded
-                # docker tag $ENVIRONMENT-$APP_NAME $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
-                #
+                docker tag $ENVIRONMENT-$APP_NAME $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
+
                 # # Push the docker image to the AWS instance
                 # docker push $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
                 #
