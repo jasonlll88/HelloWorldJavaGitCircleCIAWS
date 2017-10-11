@@ -24,9 +24,10 @@ jobs:
       - checkout
       - restore_cache:
           key: HelloWorldJavaGitCircleCIAWS-{{ checksum "pom.xml" }}
-      - run: git config --global user.email circleci@circleci
-      - run: git config --global user.name CircleCI
+      - run: git config --global user.email jasonlll88@hotmail.com
+      - run: git config --global user.name jasonlll88
       - run: mvn clean install
+
       - save_cache:
           # https://circleci.com/docs/2.0/caching/#caching-libraries MAVEN
           paths:
