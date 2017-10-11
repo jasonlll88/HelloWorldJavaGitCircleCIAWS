@@ -52,16 +52,16 @@ jobs:
             else
               echo "Not deploy in master"
             fi
+        #    JQ="jq -r -e"
 
-
-##### example of script
-
-            JQ="jq -r -e"
-            
+      ##### example of script
 
 
 
-######
+
+
+
+      ######
 
       # - run:
       #     name: SONAR
