@@ -54,13 +54,13 @@ jobs:
             fi
 
 
-      - run:
-          name: SONAR
-          # if the branch is master then run
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-                          mvn sonar:sonar -s settings_sonar.xml
-            fi
+      # - run:
+      #     name: SONAR
+      #     # if the branch is master then run
+      #     command:|
+      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
+      #                     mvn sonar:sonar -s settings_sonar.xml
+      #       fi
 
 
 #     docker:
