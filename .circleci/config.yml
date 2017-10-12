@@ -89,8 +89,6 @@ jobs:
                 # # Push the docker image to the AWS instance
                 docker push $AWS_ACCOUNT_ID.dkr.ecr.us-west-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
 
-
-
               fi
             else
               echo "Not deploy in master"
