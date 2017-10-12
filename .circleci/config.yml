@@ -84,7 +84,7 @@ jobs:
                 docker build -t $ENVIRONMENT-$APP_NAME .
 
                 # # modify the tag of the image builded
-                docker tag $ENVIRONMENT-$APP_NAME $AWS_ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
+                docker tag $ENVIRONMENT-$APP_NAME $AWS_ACCOUNT_ID.dkr.ecr.us-west-1.amazonaws.com/$ENVIRONMENT-$APP_NAME:$VERSION
 
                 docker images
 
